@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="New Text Document.css">
+  <style>
+    body {
+      background-image: url('skibidi.png');
+      background-size: cover; /* Ensure the image covers the entire background */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+    }
+    /* Override the default button styles */
+    button {
+      background-color: #4CAF50; /* Set your preferred background color */
+      color: white; /* Text color */
+      border: none; /* Remove border */
+      padding: 10px 20px; /* Add padding */
+      text-align: center; /* Center the text */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Ensure it aligns correctly */
+      font-size: 16px; /* Font size */
+      margin: 4px 2px; /* Margin for spacing */
+      cursor: pointer; /* Pointer cursor on hover */
+      border-radius: 4px; /* Rounded corners */
+    }
+
+    /* Remove blue highlight effect on hover */
+    button:hover {
+      background-color: #45a049; /* Darker green background color on hover */
+      outline: none; /* Remove outline */
+      box-shadow: none; /* Remove shadow */
+    }
+
+    button:focus {
+      outline: none; /* Remove outline when button is focused */
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+        <div class="background-container">
+            <img src="background.jpg" alt="Background Image" class="background-img">
+            <!-- <img src="cover.webp" alt="Mythbuster Science Logo" class="logo"> -->
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="myths.html">Myths</a></li>
+            <li><a href="quiz.html">Quizzes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h3>Quiz</h3>
+        <p>Now that you’ve explored these myths and the truths behind them, test your understanding with this quick quiz!</p> 
+        <p>Answer each question by selecting the correct option (A, B, C, or D).</p> <br> <br>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What vegetable is often claimed to improve your vision?</p> <br>
+                <input type="radio" id="q1a" name="q1" value="A">
+                <label for="q1a">A. Broccoli</label><br>
+                <input type="radio" id="q1b" name="q1" value="B">
+                <label for="q1b">B. Carrots</label><br>
+                <input type="radio" id="q1c" name="q1" value="C">
+                <label for="q1c">C. Spinach</label><br>
+                <input type="radio" id="q1d" name="q1" value="D">
+                <label for="q1d">D. Peppers</label><br>
+                <p class="feedback" id="feedback1"></p>
+            </div>
+
+            <div class="question">
+                <p>2. What does the myth suggest about lightning strikes?</p> <br>
+                <input type="radio" id="q2a" name="q2" value="A">
+                <label for="q2a">A. Scientific theory</label><br>
+                <input type="radio" id="q2b" name="q2" value="B">
+                <label for="q2b">B. Folklore</label><br>
+                <input type="radio" id="q2c" name="q2" value="C">
+                <label for="q2c">C. Superstition</label><br>
+                <input type="radio" id="q2d" name="q2" value="D">
+                <label for="q2d">D. Fact</label><br>
+                <p class="feedback" id="feedback2"></p>
+            </div>
+
+            <div class="question">
+                <p>3. What substance is commonly believed to cause hyperactivity in children?</p> <br>
+                <input type="radio" id="q3a" name="q3" value="A">
+                <label for="q3a">A. Salt</label><br>
+                <input type="radio" id="q3b" name="q3" value="B">
+                <label for="q3b">B. Sugar</label><br>
+                <input type="radio" id="q3c" name="q3" value="C">
+                <label for="q3c">C. Water</label><br>
+                <input type="radio" id="q3d" name="q3" value="D">
+                <label for="q3d">D. Fat</label><br>
+                <p class="feedback" id="feedback3"></p>
+            </div>
+
+            <div class="question">
+                <p>4. What percentage of the brain is commonly believed to be unused?</p> <br>
+                <input type="radio" id="q4a" name="q4" value="A">
+                <label for="q4a">A. 10%</label><br>
+                <input type="radio" id="q4b" name="q4" value="B">
+                <label for="q4b">B. 40%</label><br>
+                <input type="radio" id="q4c" name="q4" value="C">
+                <label for="q4c">C. 50%</label><br>
+                <input type="radio" id="q4d" name="q4" value="D">
+                <label for="q4d">D. 90%</label><br>
+                <p class="feedback" id="feedback4"></p>
+            </div>
+
+            <div class="question">
+                <p>5. What ability do bats use for navigation and hunting?</p> <br>
+                <input type="radio" id="q5a" name="q5" value="A">
+                <label for="q5a">A. Echolocation</label><br>
+                <input type="radio" id="q5b" name="q5" value="B">
+                <label for="q5b">B. Magnetoreception</label><br>
+                <input type="radio" id="q5c" name="q5" value="C">
+                <label for="q5c">C. Ultrasound</label><br>
+                <input type="radio" id="q5d" name="q5" value="D">
+                <label for="q5d">D. Infrasound</label><br>
+                <p class="feedback" id="feedback5"></p>
+            </div>
+
+            <div class="question">
+                <p>6. What sense helps us understand body position and movement without looking?</p> <br>
+                <input type="radio" id="q6a" name="q6" value="A">
+                <label for="q6a">A. Proprioception</label><br>
+                <input type="radio" id="q6b" name="q6" value="B">
+                <label for="q6b">B. Nociception</label><br>
+                <input type="radio" id="q6c" name="q6" value="C">
+                <label for="q6c">C. Thermoception</label><br>
+                <input type="radio" id="q6d" name="q6" value="D">
+                <label for="q6d">D. Olfaction</label><br>
+                <p class="feedback" id="feedback6"></p>
+            </div>
+
+            <div class="question">
+                <p>7. What is the primary function of sweating?</p> <br>
+                <input type="radio" id="q7a" name="q7" value="A">
+                <label for="q7a">A. Temperature regulation</label><br>
+                <input type="radio" id="q7b" name="q7" value="B">
+                <label for="q7b">B. Waste removal</label><br>
+                <input type="radio" id="q7c" name="q7" value="C">
+                <label for="q7c">C. Protection</label><br>
+                <input type="radio" id="q7d" name="q7" value="D">
+                <label for="q7d">D. Absorption</label><br>
+                <p class="feedback" id="feedback7"></p>
+            </div>
+
+            <div class="question">
+                <p>8. What makes the Great Wall of China challenging to see from space?</p> <br>
+                <input type="radio" id="q8a" name="q8" value="A">
+                <label for="q8a">A. Color</label><br>
+                <input type="radio" id="q8b" name="q8" value="B">
+                <label for="q8b">B. Length</label><br>
+                <input type="radio" id="q8c" name="q8" value="C">
+                <label for="q8c">C. Height</label><br>
+                <input type="radio" id="q8d" name="q8" value="D">
+                <label for="q8d">D. Shape</label><br>
+                <p class="feedback" id="feedback8"></p>
+            </div>
+
+            <div class="question">
+                <p>9. What is the modern understanding of taste receptor distribution on the tongue?</p> <br>
+                <input type="radio" id="q9a" name="q9" value="A">
+                <label for="q9a">A. Uniform</label><br>
+                <input type="radio" id="q9b" name="q9" value="B">
+                <label for="q9b">B. Sweet at the tip</label><br>
+                <input type="radio" id="q9c" name="q9" value="C">
+                <label for="q9c">C. Bitter at the back</label><br>
+                <input type="radio" id="q9d" name="q9" value="D">
+                <label for="q9d">D. Salty at the sides</label><br>
+                <p class="feedback" id="feedback9"></p>
+            </div>
+
+            <div class="question">
+                <p>10. How long does swallowed gum actually stay in the digestive system?</p> <br>
+                <input type="radio" id="q10a" name="q10" value="A">
+                <label for="q10a">A. Few days</label><br>
+                <input type="radio" id="q10b" name="q10" value="B">
+                <label for="q10b">B. 7 years</label><br>
+                <input type="radio" id="q10c" name="q10" value="C">
+                <label for="q10c">C. 1 year</label><br>
+                <input type="radio" id="q10d" name="q10" value="D">
+                <label for="q10d">D. 6 months</label><br>
+                <p class="feedback" id="feedback10"></p>
+            </div>
+
+            <div class="question">
+                <p>11. Which of the following is true about the memory span of goldfish?</p> <br>
+                <input type="radio" id="q11a" name="q11" value="A">
+                <label for="q11a">A. Goldfish can only remember information for three seconds.</label><br>
+                <input type="radio" id="q11b" name="q11" value="B">
+                <label for="q11b">B. Goldfish have no cognitive abilities and cannot learn tasks.</label><br>
+                <input type="radio" id="q11c" name="q11" value="C">
+                <label for="q11c">C.  Goldfish have impressive memory capabilities and can retain information for several months.</label><br>
+                <input type="radio" id="q11d" name="q11" value="D">
+                <label for="q11d">D.  Goldfish are unable to recognize different shapes and colors.</label><br>
+                <p class="feedback" id="feedback11"></p>
+              </div>
+  
+              <div class="question"></div>
+                <p>12. What does scientific research reveal about the five-second rule?</p> <br>
+                <input type="radio" id="q12a" name="q12" value="A">
+                <label for="q12a">A. Bacteria only transfer to food if it remains on the floor for more than five seconds.</label><br>
+                <input type="radio" id="q12b" name="q12" value="B">
+                <label for="q12b">B. Bacteria can transfer to food almost instantly upon contact with a contaminated surface. </label><br>
+                <input type="radio" id="q12c" name="q12" value="C">
+                <label for="q12c">C. The five-second rule is valid for all types of food, regardless of the surface cleanliness. </label><br>
+                <input type="radio" id="q12d" name="q12" value="D">
+                <label for="q12d">D. Food picked up within five seconds is always safe to eat, regardless of the floor's cleanliness.  </label><br>
+                <p class="feedback" id="feedback12"></p>
+              </div>
+  
+              <div class="question"></div>
+                <p>13. How do dogs and cats perceive colors compared to humans?</p> <br>
+                <input type="radio" id="q13a" name="q13" value="A"> 
+                <label for="q13a">A.  Dogs and cats see colors, but their perception is less vibrant; they can perceive blue and green </label><br>
+                <input type="radio" id="q13b" name="q13" value="B">
+                <label for="q13b">B. Dogs and cats see only in black and white, with no color perception.              </label><br>
+                <input type="radio" id="q13c" name="q13" value="C">
+                <label for="q13c">C.  Dogs and cats see colors but in a more vibrant range than humans</label><br>
+                <input type="radio" id="q13d" name="q13" value="D">
+                <label for="q13d">D.  Dogs and cats see all colors as equally vibrant as humans do. </label><br>
+                <p class="feedback" id="feedback13"></p>
+              </div>
+  
+              <div class="question"></div>
+                <p>14. What is the current scientific consensus regarding the dinosaur genus "Brontosaurus"? </p> <br>
+                <input type="radio" id="q14a" name="q14" value="A">
+                <label for="q14a">A.  Brontosaurus is recognized as a distinct and valid genus separate from Apatosaurus. </label><br>
+                <input type="radio" id="q14b" name="q14" value="B">
+                <label for="q14b">B.  Brontosaurus and Apatosaurus are two entirely different dinosaur species with no relation.          </label><br>
+                <input type="radio" id="q14c" name="q14" value="C">
+                <label for="q14c">C.  The name Brontosaurus has been officially reinstated as a distinct genus by recent researchers. </label><br>
+                <input type="radio" id="q14d" name="q14" value="D">
+                <label for="q14d">D.  Brontosaurus is a misclassified Apatosaurus, and the correct name is Apatosaurus. </label><br>
+                <p class="feedback" id="feedback14"></p>
+              </div>
+  
+              <div class="question"></div>
+                <p>15. How effective is a shark's sense of smell in detecting blood? </p> <br>
+                <input type="radio" id="q15a" name="q15" value="A">
+                <label for="q15a">A.  Sharks cannot detect blood at all due to the dispersion of odor molecules. </label><br>
+                <input type="radio" id="q15b" name="q15" value="B">
+                <label for="q15b">B.  Sharks can detect a single drop of blood from miles away. </label><br>
+                <input type="radio" id="q15c" name="q15" value="C">
+                <label for="q15c">C.  Sharks have no special abilities in detecting blood compared to other animals</label><br>
+                <input type="radio" id="q15d" name="q15" value="D">
+                <label for="q15d">D.  Sharks can detect blood from a few hundred yards away, not miles.</label><br>
+                <p class="feedback" id="feedback15"></p>
+              </div>
+  
+              <div class="question"></div>
+                <p>16. What does scientific reality say about the potential danger of a penny dropped from the Empire State Building?</p> <br>
+                <input type="radio" id="q16a" name="q16" value="A"> 
+                <label for="q16a">A. A penny, despite accelerating to 50 mph, is unlikely to cause serious harm due to its small mass.</label><br>
+                <input type="radio" id="q16b" name="q16" value="B">
+                <label for="q16b">B. A penny can cause serious injury or death due to its high velocity.</label><br>
+                <input type="radio" id="q16c" name="q16" value="C">
+                <label for="q16c">C. A penny dropped from the Empire State Building is guaranteed to be lethal.</label><br>
+                <input type="radio" id="q16d" name="q16" value="D">
+                <label for="q16d">D. A penny cannot hurt anyone, regardless of its speed or height.</label><br>
+               <p class="feedback" id="feedback16"></p>
+            </div>
+  
+            <div class="question"></div>
+               <p>17. What is the defining characteristic of a desert?</p> <br>
+               <input type="radio" id="q17a" name="q17" value="A">
+               <label for="q17a">A. High temperatures and sandy terrain.</label><br>
+              <input type="radio" id="q17b" name="q17" value="B">
+              <label for="q17b">B. Warm climate and abundant vegetation.</label><br>
+              <input type="radio" id="q17c" name="q17" value="C">
+              <label for="q17c">C. Extreme dryness and low precipitation.</label><br>
+              <input type="radio" id="q17d" name="q17" value="D">
+              <label for="q17d">D. Vast sandy expanses and numerous animal species.</label><br>
+              <p class="feedback" id="feedback17"></p>
+           </div>
+  
+           <div class="question"></div>
+             <p>18. What does the scientific perspective say about the "eight glasses of water a day" rule?</p> <br>
+             <input type="radio" id="q18a" name="q18" value="A">
+             <label for="q18a">A. Everyone must drink exactly eight glasses of water daily for optimal health.</label><br>
+             <input type="radio" id="q18b" name="q18" value="B">
+             <label for="q18b">B. Hydration needs vary for individuals, and the eight-glass rule is an oversimplification.</label><br>
+            <input type="radio" id="q18c" name="q18" value="C">
+            <label for="q18c">C. The Institute of Medicine recommends eight glasses of water a day for men and women.</label><br>
+            <input type="radio" id="q18d" name="q18" value="D">
+            <label for="q18d">D. The eight-glass rule is a precise requirement for all age groups and activity levels.</label><br>
+            <p class="feedback" id="feedback18"></p>
+           </div>
+  
+           <div class="question"></div>
+            <p>19. How far away is the moon from Earth, according to scientific facts?</p> <br>
+            <input type="radio" id="q19a" name="q19" value="A">
+            <label for="q19a">A. Just a few hundred miles.</label><br>
+            <input type="radio" id="q19b" name="q19" value="B">
+            <label for="q19b">B. Approximately 1,000 miles.</label><br>
+            <input type="radio" id="q19c" name="q19" value="C">
+            <label for="q19c">C. Roughly 10,000 miles.</label><br>
+            <input type="radio" id="q19d" name="q19" value="D">
+            <label for="q19d">D. About 239,000 miles.</label><br>
+            <p class="feedback" id="feedback19"></p>
+           </div>
+  
+           <div class="question"></div>
+            <p>20. What are some additional phases of matter beyond the traditional solid, liquid, and gas?</p> <br>
+            <input type="radio" id="q20a" name="q20" value="A">
+            <label for="q20a">A. Plasma, Bose-Einstein Condensate, Fermionic Condensate, and Liquid Crystals.</label><br>
+            <input type="radio" id="q20b" name="q20" value="B">
+            <label for="q20b">B. Air, Water Vapor, Plasma, and Liquid.</label><br>
+            <input type="radio" id="q20c" name="q20" value="C">
+            <label for="q20c">C. Solid, Liquid, Gas, and Steam.</label><br>
+            <input type="radio" id="q20d" name="q20" value="D">
+            <label for="q20d">D. Plasma, Solid, Gas, and Oxygen.</label><br>
+            <p class="feedback" id="feedback20"></p>
+           </div>
+           <br>
+
+            <button type="button" onclick="submitQuiz()" class="submit">Submit Quiz</button>
+            <p id="totalScore"></p>
+            <div class="question">
+            <br>
+        </form>
+    </main>
+
+    <script>
+      const correctAnswers = ["C", "B", "B", "A", "D", "A", "C", "D", "B", "A", "C", "B", "A", "D", "D", "A", "C", "B", "D", "A" ];
+
+function submitQuiz() {
+    let score = 0;
+    let totalQuestions = correctAnswers.length;
+
+    // Check each question and update score
+    for (let i = 1; i <= totalQuestions; i++) {
+        let selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+        let feedback = document.getElementById(`feedback${i}`);
+
+        if (selectedAnswer) {
+            if (selectedAnswer.value === correctAnswers[i - 1]) {
+                score++;
+                feedback.textContent = "Correct!";
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = `Incorrect! The correct answer is ${correctAnswers[i - 1]}.`;
+                feedback.style.color = "red";
+            }
+        } else {
+            feedback.textContent = "You didn't select an answer!";
+            feedback.style.color = "red";
+        }
+    }
+
+    let totalScore = document.getElementById("totalScore");
+    let percentage = (score / totalQuestions) * 100;
+
+    // Display total score and performance feedback
+    totalScore.textContent = `Your total score is ${score} out of ${totalQuestions}. (${percentage.toFixed(2)}%)`;
+
+    let performanceMessage = "";
+    if (percentage > 90) {
+        performanceMessage = "Excellent performance!";
+    } else if (percentage > 80) {
+        performanceMessage = "Great performance!";
+    } else if (percentage > 65) {
+        performanceMessage = "Average performance, need to improve.";
+    } else {
+        performanceMessage = "Very poor performance, needs major improvement.";
+    }
+
+    totalScore.textContent += ` ${performanceMessage} You may read the myths again and retake the test.`;
+}
+
+
+    </script>
+      <footer>
+        <p>© 2024 Mythbuster Science. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
