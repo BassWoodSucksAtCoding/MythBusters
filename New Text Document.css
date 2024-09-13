@@ -1,4 +1,57 @@
 /* Container for background image and logo */
+
+.banner {
+    width: 100%;
+    height: 75px; /* Adjust height as needed */
+    background-color: #4CAF50; /* Example background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 15px;
+    background-image: url('textbg.jpg');
+    background-size: cover; /* Stretch to cover the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+}
+
+.heading {
+    font-size: 36px;
+    margin: 0;
+}
+
+.background-container2 {
+    position: relative;
+    height: 50vh; /* Adjust height as needed */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.background-container3 {
+    position: relative;
+    height: 25vh; /* Adjust height as needed */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
 .background-container {
     position: relative;
     height: 50vh; /* Adjust height as needed */
@@ -47,7 +100,7 @@
 
 /* Navbar styling */
 .navbar {
-    background-color: #1e3a5f; /* Cool dark blue for the navigation */
+    background-color: #203a5d; /* Cool dark blue for the navigation */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0; /* Remove any margin */
@@ -99,7 +152,7 @@ main {
 
 main h3 {
     text-align: center;
-    color: #002fff;
+    color: #203a5d;
     margin-bottom: 20px;
     font-size: 2.2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -107,13 +160,14 @@ main h3 {
 main h2 {
     color: black;
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size:25px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 main p {
     color: #000000;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 /* Question and feedback styling */
